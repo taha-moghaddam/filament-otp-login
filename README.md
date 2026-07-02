@@ -42,7 +42,7 @@ Schema::create('admin_users', function (Blueprint $table) {
     $table->string('name');
     $table->unsignedBigInteger('mobile')->unique();
     $table->timestamp('mobile_verified_at')->nullable();
-    $table->unsignedSmallInteger('otp_code')->nullable();
+    $table->unsignedInteger('otp_code')->nullable();
     $table->timestamp('otp_expires_at')->nullable();
     $table->unsignedTinyInteger('otp_sent_count')->default(0);
     $table->rememberToken();

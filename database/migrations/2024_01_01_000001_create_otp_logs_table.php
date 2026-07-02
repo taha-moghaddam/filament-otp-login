@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create($table, function (Blueprint $schema) use ($fk): void {
             $schema->id();
             $schema->foreignId($fk)->index();
-            $schema->unsignedSmallInteger('otp_code');
+            $schema->unsignedInteger('otp_code');
             $schema->ipAddress('ip');
             $schema->boolean('is_used')->default(false)->index();
             $schema->timestamps();
